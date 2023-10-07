@@ -85,23 +85,23 @@ function Welcome() {
       <div className="services p-4 my-10">
         <h1 className="ml-[10%] border-b-2 w-max pb-1 border-black font-bold text-xl">Service Category</h1>
         <div className="services ml-8 space-y-2 grid grid-cols-2 grid-rows-2 md:flex justify-center items-center mt-5 flex-wrap space-x-0 md:space-x-16">
-            <div className="grooming flex flex-wrap flex-col justify-center items-center border p-4 rounded-md w-[150px] h-[180px]">
+            <div className="grooming bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-wrap flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
                 <img src={Grooming} className="w-[70px]" alt="grooming" />
                 <span>Grooming</span>
             </div>
-            <div className="HealthCare flex flex-col justify-center items-center border p-4 rounded-md w-[150px] h-[180px]">
+            <div className="HealthCare bg-gradient-to-b from-[#FFEE94] to-transparent flex flex-col justify-center items-center border border-[#FFEE94] p-4 rounded-md w-[150px] h-[180px]">
                 <img src={HealthCare} className="w-[50px] h-[70px] object-contain" alt="HealthCare" />
                 <span>Healthcare</span>
             </div>
-            <div className="DayCare flex flex-col justify-center items-center border p-4 rounded-md w-[150px] h-[180px]">
+            <div className="DayCare bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
                 <img src={DayCare} className="w-[70px] h-[70px] object-contain" alt="DayCare" />
                 <span>Daycare</span>
             </div>
-            <div className="Training flex flex-col justify-center items-center border p-4 rounded-md w-[150px] h-[180px]">
+            <div className="Training bg-gradient-to-b from-[#FFEE94] to-transparent flex flex-col justify-center items-center border border-[#FFEE94] p-4 rounded-md w-[150px] h-[180px]">
                 <img src={Training} className="w-[70px] h-[70px] object-contain" alt="Training" />
                 <span>Training</span>
             </div>
-            <div className="Hyginic flex flex-col justify-center items-center border p-4 rounded-md w-[150px] h-[180px]">
+            <div className="Hyginic  bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
                 <img src={Hyginic} className="w-[70px] h-[70px] object-contain" alt="Hyginic" />
                 <span>Hyginic care</span>
             </div>
