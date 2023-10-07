@@ -13,6 +13,12 @@ import DayCare from "../Images/DayCare.png";
 import HealthCare from "../Images/HealthCare.png";
 import Training from "../Images/Training.png";
 import Hyginic from "../Images/Hyginic.png";
+import SpeaksBg from "../Images/speaks-bg.png";
+import SpeaksDog from "../Images/speaks-dog.png";
+import Food from "../Images/food.png";
+import Bone from "../Images/bone.png";
+import SpeaksPaw from "../Images/speaks-paw.png";
+import BorderPaw from "../Images/paw-border.png"
 
 import TransparentBg from "../Images/transparent-bg.png";
 
@@ -82,29 +88,100 @@ function Welcome() {
           />
         </div>
       </div>
+      {/* services */}
       <div className="services p-4 my-10">
-        <h1 className="ml-[10%] border-b-2 w-max pb-1 border-black font-bold text-xl">Service Category</h1>
+        <h1 className="ml-[10%] border-b-2 w-max pb-1 border-black font-bold text-xl">
+          Service Category
+        </h1>
         <div className="services ml-8 space-y-2 grid grid-cols-2 grid-rows-2 md:flex justify-center items-center mt-5 flex-wrap space-x-0 md:space-x-16">
-            <div className="grooming bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-wrap flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
-                <img src={Grooming} className="w-[70px]" alt="grooming" />
-                <span>Grooming</span>
-            </div>
-            <div className="HealthCare bg-gradient-to-b from-[#FFEE94] to-transparent flex flex-col justify-center items-center border border-[#FFEE94] p-4 rounded-md w-[150px] h-[180px]">
-                <img src={HealthCare} className="w-[50px] h-[70px] object-contain" alt="HealthCare" />
-                <span>Healthcare</span>
-            </div>
-            <div className="DayCare bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
-                <img src={DayCare} className="w-[70px] h-[70px] object-contain" alt="DayCare" />
-                <span>Daycare</span>
-            </div>
-            <div className="Training bg-gradient-to-b from-[#FFEE94] to-transparent flex flex-col justify-center items-center border border-[#FFEE94] p-4 rounded-md w-[150px] h-[180px]">
-                <img src={Training} className="w-[70px] h-[70px] object-contain" alt="Training" />
-                <span>Training</span>
-            </div>
-            <div className="Hyginic  bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
-                <img src={Hyginic} className="w-[70px] h-[70px] object-contain" alt="Hyginic" />
-                <span>Hyginic care</span>
-            </div>
+          <div className="grooming bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-wrap flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
+            <img src={Grooming} className="w-[70px]" alt="grooming" />
+            <span>Grooming</span>
+          </div>
+          <div className="HealthCare bg-gradient-to-b from-[#FFEE94] to-transparent flex flex-col justify-center items-center border border-[#FFEE94] p-4 rounded-md w-[150px] h-[180px]">
+            <img
+              src={HealthCare}
+              className="w-[50px] h-[70px] object-contain"
+              alt="HealthCare"
+            />
+            <span>Healthcare</span>
+          </div>
+          <div className="DayCare bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
+            <img
+              src={DayCare}
+              className="w-[70px] h-[70px] object-contain"
+              alt="DayCare"
+            />
+            <span>Daycare</span>
+          </div>
+          <div className="Training bg-gradient-to-b from-[#FFEE94] to-transparent flex flex-col justify-center items-center border border-[#FFEE94] p-4 rounded-md w-[150px] h-[180px]">
+            <img
+              src={Training}
+              className="w-[70px] h-[70px] object-contain"
+              alt="Training"
+            />
+            <span>Training</span>
+          </div>
+          <div className="Hyginic  bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
+            <img
+              src={Hyginic}
+              className="w-[70px] h-[70px] object-contain"
+              alt="Hyginic"
+            />
+            <span>Hyginic care</span>
+          </div>
+        </div>
+      </div>
+      {/* ---------- */}
+      <div className="dogs-do-speaks h-[110vh] md:h-[90vh] py-10 flex flex-col md:flex-row justify-around items-center relative">
+        <img src={BorderPaw} className="w-[70px] absolute top-[30px] right-[100px]" alt="paw" />
+        <div className="speaks-lef relative">
+          <img
+            src={Food}
+            className="w-[60px] z-10 absolute -bottom-[60px] right-[90px]"
+            alt="dog"
+          />
+          <img
+            src={Bone}
+            className="w-[40px] z-10 absolute top-[160px] left-[50px]"
+            alt="dog"
+          />
+          <img
+            src={SpeaksPaw}
+            className="w-[40px] z-10 absolute top-[60px] left-[50px]"
+            alt="dog"
+          />
+          <img
+            src={SpeaksPaw}
+            className="w-[40px] z-10 absolute -top-[30px] left-[150px]"
+            alt="dog"
+          />
+          <img
+            src={SpeaksPaw}
+            className="w-[40px] z-10 absolute top-[60px] right-[90px]"
+            alt="dog"
+          />
+          <div className="bg-dog relative ">
+            <img
+              src={SpeaksBg}
+              className="w-[400px] absolute -z-10 -top-20"
+              alt="dog"
+            />
+            <img src={SpeaksDog} className="w-[420px] z-10" alt="dog" />
+          </div>
+        </div>
+        <div className="speaks-right flex flex-col justify-start space-y-6 p-6 md:p-0">
+          <h1 className="text-3xl font-bold break-words">
+          Dogs do speak, but only to those <br /> who know how to listen.
+          </h1>
+          <p className="max-w-[520px]">
+          Sweet roll ice cream powder candy 
+          canes ice cream donut pudding biscuit ice cream.
+           Cupcake tootsie roll sugar plum danish pudding fruitcake
+            cheesecake jelly-o. Pie muffin topping cake. Pudding biscuit 
+            caramels topb
+          </p>
+          <Button text="Explore More" />
         </div>
       </div>
     </>
