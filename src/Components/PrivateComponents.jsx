@@ -1,9 +1,14 @@
-import { Outlet } from "react-router-dom";
+import { Outlet,useNavigate } from "react-router-dom";
 
-// import { Navigate } from "react-router-dom";
 function PrivateComponents() {
+const navigate = useNavigate();
+    const auth = localStorage.getItem('auth')
     return ( <>
-    <Outlet/>
+
+    {
+     auth  ?  <Outlet/> : navigate("/login")
+    }
+   
     </> );
 }
 

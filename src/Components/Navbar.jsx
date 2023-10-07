@@ -6,6 +6,7 @@ import { useState } from "react";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
+  const auth = JSON.parse(localStorage.getItem("auth"));
   return (
     <>
       <div className="navbar ">
@@ -52,12 +53,25 @@ function Navbar() {
           )}
 
           <div className="user-sign  items-center space-x-4 hidden md:flex">
-            <Link to="/">
-              <Button text="Sign In" />
-            </Link>
-            <Link to="/">
-              <Button text="Register" />
-            </Link>
+            {auth ? (
+              <>
+                <span className="mr-2">{auth.name}</span>
+                <img
+                  src={auth.imageUrl}
+                  className="w-[50px] rounded-full"
+                  alt=""
+                />
+                <Link to="/logout">
+                  <Button text="Logout" />
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/login">
+                  <Button text="Sign In" />
+                </Link>
+              </>
+            )}
           </div>
         </nav>
       </div>

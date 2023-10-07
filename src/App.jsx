@@ -4,8 +4,24 @@ import Welcome from "./Pages/Welcome";
 import SignIn from "./Pages/SignIn";
 import PrivateComponents from "./Components/PrivateComponents";
 import SignUp from "./Pages/SignUp";
-
+import Logout from "./Components/Logout";
+import { gapi } from "gapi-script";
+import { useEffect } from "react";
+const clientId =
+  "686135361204-cv439itq3ekoc8j6fi5i2e3fgbjg9tjk.apps.googleusercontent.com";
 function App() {
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: "",
+      });
+    }
+    gapi.load("client:auth2", start);
+  });
+
+  // var accessToken = gapi.auth.getToken().access_token;
+
   return (
     <div className="App overflow-hidden">
       <BrowserRouter>
@@ -14,8 +30,9 @@ function App() {
           <Route element={<PrivateComponents />}>
             <Route path="/" element={<Welcome />} />
           </Route>
-          <Route path="/Login" element={<SignIn />} />
-          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/login" element={<SignIn />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/signUp" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </div>
