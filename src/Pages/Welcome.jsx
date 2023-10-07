@@ -18,9 +18,10 @@ import SpeaksDog from "../Images/speaks-dog.png";
 import Food from "../Images/food.png";
 import Bone from "../Images/bone.png";
 import SpeaksPaw from "../Images/speaks-paw.png";
-import BorderPaw from "../Images/paw-border.png"
+import BorderPaw from "../Images/paw-border.png";
 
 import TransparentBg from "../Images/transparent-bg.png";
+import BuyNowCard from "../Components/BuyNowCard";
 
 function Welcome() {
   return (
@@ -134,7 +135,11 @@ function Welcome() {
       </div>
       {/* ---------- */}
       <div className="dogs-do-speaks h-[110vh] md:h-[90vh] py-10 flex flex-col md:flex-row justify-around items-center relative">
-        <img src={BorderPaw} className="w-[70px] absolute top-[30px] right-[100px]" alt="paw" />
+        <img
+          src={BorderPaw}
+          className="w-[70px] absolute top-[30px] right-[100px]"
+          alt="paw"
+        />
         <div className="speaks-lef relative">
           <img
             src={Food}
@@ -172,16 +177,31 @@ function Welcome() {
         </div>
         <div className="speaks-right flex flex-col justify-start space-y-6 p-6 md:p-0">
           <h1 className="text-3xl font-bold break-words">
-          Dogs do speak, but only to those <br /> who know how to listen.
+            Dogs do speak, but only to those <br /> who know how to listen.
           </h1>
           <p className="max-w-[520px]">
-          Sweet roll ice cream powder candy 
-          canes ice cream donut pudding biscuit ice cream.
-           Cupcake tootsie roll sugar plum danish pudding fruitcake
-            cheesecake jelly-o. Pie muffin topping cake. Pudding biscuit 
-            caramels topb
+            Sweet roll ice cream powder candy canes ice cream donut pudding
+            biscuit ice cream. Cupcake tootsie roll sugar plum danish pudding
+            fruitcake cheesecake jelly-o. Pie muffin topping cake. Pudding
+            biscuit caramels topb
           </p>
           <Button text="Explore More" />
+        </div>
+      </div>
+      {/* --------------------- */}
+
+      <div className="food my-10">
+        <h1 className="ml-[10%] border-b-2 w-max pb-1 border-black font-bold text-xl">
+          Dog Nutrients & Food
+        </h1>
+        <div className="flex justify-between items-center mx-[10%] my-10">
+          <span className="font-bold text-xl">25 % OFF all Products </span>
+          <Button text="Explore More" />
+        </div>
+        <div className="products px-[10%] flex justify-around items-start">
+          <BuyNowCard />
+          <BuyNowCard />
+          <BuyNowCard />
         </div>
       </div>
     </>
