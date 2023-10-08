@@ -82,7 +82,7 @@ function Navbar() {
         </nav>
       </div>
 
-      <Outlet />
+    
     </>
   );
 }

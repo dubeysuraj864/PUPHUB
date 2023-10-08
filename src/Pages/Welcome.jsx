@@ -210,7 +210,7 @@ function Welcome() {
       <div className="dogs-do-speaks bg-gradient-to-b from-[#98f2e175] to-transparent h-[110vh] md:h-[120vh] py-10 flex flex-col md:flex-row-reverse justify-around items-center relative">
         <img
           src={BorderPaw}
-          className="w-[70px] absolute top-[30px] right-[100px]"
+          className="w-[70px] absolute top-[30px] left-[100px]"
           alt="paw"
         />
         <div className="speaks-lef relative">
