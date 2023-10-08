@@ -3,6 +3,7 @@ import Menu from "../Images/Group-9.png";
 import { Link, Outlet } from "react-router-dom";
 import Button from "./Button";
 import { useState } from "react";
+import Logout from "../Components/Logout";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -20,37 +21,41 @@ function Navbar() {
           <div className="menu group" onClick={(e) => setToggle(!toggle)}>
             <img src={Menu} className="w-12 md:hidden block" alt="logo" />
           </div>
-          {toggle ? (
+          {auth ? (
             <>
-              <div
-                className="nav-links group-[]: pr-6 bg-[#F1C21B] md:w-auto md:bg-transparent
+              {toggle ? (
+                <>
+                  <div
+                    className="nav-links group-[]: pr-6 bg-[#F1C21B] md:w-auto md:bg-transparent
            w-[100vw] space-x-4 md:static absolute md:normal flex flex-col items-center 
            justify-center py-10 px-0 space-y-6 md:space-y-0 top-[100px] -left-[16px] text-center
             md:block transition-all z-20"
-              >
-                <Link to="/">Our Services</Link>
-                <Link to="/">About Us</Link>
-                <Link to="/">Products</Link>
-                <Link to="/">Pet Care</Link>
-                <Link to="/">Contact</Link>
-              </div>
-            </>
-          ) : (
-            <>
-              <div
-                className="nav-links group-[]: pr-6 bg-[#F1C21B] md:w-auto md:bg-transparent
+                  >
+                    <Link to="/">Our Services</Link>
+                    <Link to="/">About Us</Link>
+                    <Link to="/">Products</Link>
+                    <Link to="/">Pet Care</Link>
+                    <Link to="/">Contact</Link>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div
+                    className="nav-links group-[]: pr-6 bg-[#F1C21B] md:w-auto md:bg-transparent
            w-[100vw] space-x-4 md:static absolute md:normal flex flex-col items-center 
            justify-center py-10 px-0 space-y-6 md:space-y-0 top-[100px] -left-[1600px] text-center
             md:block transition-all"
-              >
-                <Link to="/">Our Services</Link>
-                <Link to="/">About Us</Link>
-                <Link to="/">Products</Link>
-                <Link to="/">Pet Care</Link>
-                <Link to="/">Contact</Link>
-              </div>
+                  >
+                    <Link to="/">Our Services</Link>
+                    <Link to="/">About Us</Link>
+                    <Link to="/">Products</Link>
+                    <Link to="/">Pet Care</Link>
+                    <Link to="/">Contact</Link>
+                  </div>
+                </>
+              )}
             </>
-          )}
+          ) : null}
 
           <div className="user-sign  items-center space-x-4 hidden md:flex">
             {auth ? (
@@ -61,9 +66,7 @@ function Navbar() {
                   className="w-[50px] rounded-full"
                   alt=""
                 />
-                <Link to="/logout">
-                  <Button text="Logout" />
-                </Link>
+                   <Logout/>
               </>
             ) : (
               <>

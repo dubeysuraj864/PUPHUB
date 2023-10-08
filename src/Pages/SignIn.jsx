@@ -1,6 +1,6 @@
 import GoogleLogin from "@matheusluizn/react-google-login";
 import { useNavigate } from "react-router-dom";
-import Logout from "../Components/Logout";
+
 const clientId =
   "686135361204-cv439itq3ekoc8j6fi5i2e3fgbjg9tjk.apps.googleusercontent.com";
 function SignIn() {
@@ -10,6 +10,7 @@ function SignIn() {
     localStorage.setItem("auth", JSON.stringify(res.profileObj));
     console.log(res.profileObj.name);
     navigate("/");
+    window.location.reload(true);
   };
   const onFailure = (res) => {
     console.log("LOGIN FAILURE! res ", res);
@@ -26,7 +27,7 @@ function SignIn() {
           cookiePolicy={"single_host_origin"}
           isSignedIn={true}
         />
-        <Logout/>
+     
       </div>
     </>
   );
