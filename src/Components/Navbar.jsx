@@ -73,6 +73,9 @@ function Navbar() {
                 <Link to="/login">
                   <Button text="Sign In" />
                 </Link>
+                <Link to="/sign-up">
+                  <Button text="Register" />
+                </Link>
               </>
             )}
           </div>

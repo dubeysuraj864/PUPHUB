@@ -34,7 +34,7 @@ function App() {
           </Route>
           <Route path="/login" element={<SignIn />} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/sign-up" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </div>
