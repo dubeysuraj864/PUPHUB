@@ -19,7 +19,7 @@ function SignIn() {
     <>
       <div className="sign-in flex justify-center">
         <GoogleLogin
-          className="px-10"
+          className="px-10 border"
           clientId={clientId}
           buttonText="Continue with Google"
           onSuccess={onSuccess}
@@ -27,7 +27,6 @@ function SignIn() {
           cookiePolicy={"single_host_origin"}
           isSignedIn={true}
         />
-     
       </div>
     </>
   );
