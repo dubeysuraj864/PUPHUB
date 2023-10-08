@@ -200,14 +200,14 @@ function Welcome() {
           <span className="font-bold text-xl">25 % OFF all Products </span>
           <Link to="/products"><Button text="Explore More" /></Link>
         </div>
-        <div className="products px-[10%] flex justify-around items-start">
+        <div className="products px-[10%] flex flex-wrap justify-around items-start">
           <BuyNowCard />
           <BuyNowCard />
           <BuyNowCard />
         </div>
       </div>
       {/* ---------- */}
-      <div className="dogs-do-speaks bg-gradient-to-b from-[#98f2e175] to-transparent h-[110vh] md:h-[90vh] py-10 flex flex-col md:flex-row-reverse justify-around items-center relative">
+      <div className="dogs-do-speaks bg-gradient-to-b from-[#98f2e175] to-transparent h-[110vh] md:h-[120vh] py-10 flex flex-col md:flex-row-reverse justify-around items-center relative">
         <img
           src={BorderPaw}
           className="w-[70px] absolute top-[30px] right-[100px]"
@@ -249,11 +249,11 @@ function Welcome() {
           </div>
         </div>
         <div className="speaks-right flex flex-col justify-start space-y-6 p-6 md:p-0">
-          <h1 className="text-4xl font-bold break-words">
+          <h1 className="text-3xl font-bold break-words">
           No one appreciates the very <br /> special genius of your <br /> conversation as the dog does.
           </h1>
           <p className="max-w-[520px]">
-          No one appreciates the very special genius of your conversation as the dog does.
+          No one appreciates the very special genius of your <br /> conversation as the dog does.
           </p>
           <Button text="Explore More" />
         </div>

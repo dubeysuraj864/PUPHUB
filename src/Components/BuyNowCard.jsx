@@ -4,11 +4,11 @@ function BuyNowCard() {
   return (
     <>
       <div className="BuyNowCard w-[250px] space-y-2 m-6 border p-2 ">
-        <div className="bnc-top relative flex flex-col">
+        <div className="bnc-top relative flex flex-col justify-center items-center">
           <img src={Product} className="z-10 w-[180px]" alt="" />
           <img
             src={Base}
-            className="absolute -bottom-10 -left-[10%] z-0 w-[250px]"
+            className="absolute -bottom-10 left-[0%] z-0 w-[250px]"
             alt=""
           />
         </div>

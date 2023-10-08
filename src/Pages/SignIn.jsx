@@ -1,5 +1,6 @@
 import GoogleLogin from "@matheusluizn/react-google-login";
 import { useNavigate } from "react-router-dom";
+import Button from "../Components/Button";
 
 const clientId =
   "686135361204-cv439itq3ekoc8j6fi5i2e3fgbjg9tjk.apps.googleusercontent.com";
@@ -17,7 +18,25 @@ function SignIn() {
   };
   return (
     <>
-      <div className="sign-in flex justify-center">
+      <div className="sign-in flex justify-center items-center flex-col border mx-auto py-10 w-[400px]">
+        <h1 className="text-5xl my-10 font-semibold text-[#F1C21B]">SIGN IN</h1>
+        <form
+          action=""
+          className="justify-center items-center flex  flex-col space-y-3"
+        >
+          <input type="text" className="border p-2" placeholder="Email" />
+          <input
+            type="password"
+            className="border p-2"
+            placeholder="Password"
+          />
+          <button type="submit" className="h-[10vh] w-full cursor-pointer">
+            {" "}
+            <Button text="Login" />
+          </button>
+        
+        </form>
+        <hr className="border-1 w-1/2 my-6" />
         <GoogleLogin
           className="px-10 border"
           clientId={clientId}
