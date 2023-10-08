@@ -3,7 +3,7 @@ import Product from "../Images/BuyNowProduct.png";
 function BuyNowCard() {
   return (
     <>
-      <div className="BuyNowCard w-[250px] space-y-2 ">
+      <div className="BuyNowCard w-[250px] space-y-2 m-6 border p-2 ">
         <div className="bnc-top relative flex flex-col">
           <img src={Product} className="z-10 w-[180px]" alt="" />
           <img

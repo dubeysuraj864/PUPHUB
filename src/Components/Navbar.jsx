@@ -33,7 +33,7 @@ function Navbar() {
                   >
                     <Link to="/">Our Services</Link>
                     <Link to="/">About Us</Link>
-                    <Link to="/">Products</Link>
+                    <Link to="/products">Products</Link>
                     <Link to="/">Pet Care</Link>
                     <Link to="/">Contact</Link>
                   </div>
@@ -48,7 +48,7 @@ function Navbar() {
                   >
                     <Link to="/">Our Services</Link>
                     <Link to="/">About Us</Link>
-                    <Link to="/">Products</Link>
+                    <Link to="/products">Products</Link>
                     <Link to="/">Pet Care</Link>
                     <Link to="/">Contact</Link>
                   </div>

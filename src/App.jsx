@@ -7,6 +7,7 @@ import SignUp from "./Pages/SignUp";
 import Logout from "./Components/Logout";
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
+import Products from "./Pages/Products";
 const clientId =
   "686135361204-cv439itq3ekoc8j6fi5i2e3fgbjg9tjk.apps.googleusercontent.com";
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route element={<PrivateComponents />}>
             <Route path="/" element={<Welcome />} />
+            <Route path="/products" element={<Products />} />
           </Route>
           <Route path="/login" element={<SignIn />} />
           <Route path="/logout" element={<Logout />} />
