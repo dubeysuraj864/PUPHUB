@@ -10,10 +10,10 @@ function SignUp() {
   const onSuccess = (res) => {
     console.log("LOGIN SUCCESS! Current User: ", res.profileObj);
     localStorage.setItem("auth", JSON.stringify(res.profileObj));
-    console.log(res.profileObj.name);
     navigate("/");
     window.location.reload(true);
   };
+ 
   const onFailure = (res) => {
     console.log("LOGIN FAILURE! res ", res);
   };

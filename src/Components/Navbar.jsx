@@ -1,6 +1,6 @@
 import Logo from "../Images/logo.png";
 import Menu from "../Images/Group-9.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import { useState } from "react";
 import Logout from "../Components/Logout";
@@ -8,6 +8,7 @@ import Logout from "../Components/Logout";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const auth = JSON.parse(localStorage.getItem("auth"));
+  console.log(auth)
   return (
     <>
       <div className="navbar ">
@@ -60,7 +61,7 @@ function Navbar() {
           <div className="user-sign  items-center space-x-4 hidden md:flex">
             {auth ? (
               <>
-                <span className="mr-2">{auth.name}</span>
+                <span className="mr-2">{auth.imageUrl}{auth.name}</span>
                 <img
                   src={auth.imageUrl}
                   className="w-[50px] rounded-full"
