@@ -28,8 +28,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+        <Route path="/" element={<Welcome />} />
           <Route element={<PrivateComponents />}>
-            <Route path="/" element={<Welcome />} />
             <Route path="/products" element={<Products />} />
           </Route>
           <Route path="/login" element={<SignIn />} />
