@@ -8,7 +8,8 @@ import Logout from "../Components/Logout";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const auth = JSON.parse(localStorage.getItem("auth"));
-  console.log(auth)
+  const user = JSON.parse( localStorage.getItem("user"));
+  console.log(auth);
   return (
     <>
       <div className="navbar ">
@@ -22,7 +23,7 @@ function Navbar() {
           <div className="menu group" onClick={(e) => setToggle(!toggle)}>
             <img src={Menu} className="w-12 md:hidden block" alt="logo" />
           </div>
-          {auth ? (
+          {auth || user ? (
             <>
               {toggle ? (
                 <>
@@ -59,15 +60,17 @@ function Navbar() {
           ) : null}
 
           <div className="user-sign  items-center space-x-4 hidden md:flex">
-            {auth ? (
+            {auth || user ? (
               <>
-                <span className="mr-2">{auth.imageUrl}{auth.name}</span>
-                <img
+                <span className="mr-2">
+                  {auth ? <>{auth.name}</> : <>{user.name}</>}
+                </span>
+                {/* <img
                   src={auth.imageUrl}
                   className="w-[50px] rounded-full"
                   alt=""
-                />
-                   <Logout/>
+                /> */}
+                <Logout />
               </>
             ) : (
               <>
@@ -82,8 +85,6 @@ function Navbar() {
           </div>
         </nav>
       </div>
-
-    
     </>
   );
 }
