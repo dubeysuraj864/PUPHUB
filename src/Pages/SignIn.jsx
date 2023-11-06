@@ -10,9 +10,9 @@ function SignIn() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const onSuccess = (res) => {
-    console.log("LOGIN SUCCESS! Current User: ", res.profileObj);
+    // console.log("LOGIN SUCCESS! Current User: ", res.profileObj);
     localStorage.setItem("auth", JSON.stringify(res.profileObj));
-    console.log(res.profileObj.imageUrl);
+    // console.log(res.profileObj.imageUrl);
     navigate("/");
     window.location.reload(true);
   };
@@ -22,7 +22,7 @@ function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let result = await fetch("http://localhost:5000/login", {
+    let result = await fetch("https://puphub-backend.onrender.com/login", {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: {

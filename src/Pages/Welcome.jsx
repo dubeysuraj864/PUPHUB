@@ -201,9 +201,9 @@ function Welcome() {
           <Link to="/products"><Button text="Explore More" /></Link>
         </div>
         <div className="products px-[10%] flex flex-wrap justify-around items-start">
-          <BuyNowCard />
-          <BuyNowCard />
-          <BuyNowCard />
+          <BuyNowCard image='https://m.media-amazon.com/images/I/61IUJIyK2yL._SX522_.jpg' title="Exp1" desc="Desc1" />
+          <BuyNowCard image='https://m.media-amazon.com/images/I/61Zzb69K0qS._SX522_.jpg' title="Exp2" desc="Desc2"  />
+          <BuyNowCard image='https://m.media-amazon.com/images/I/61IUJIyK2yL._SX522_.jpg' title="Exp3" desc="Desc3"  />
         </div>
       </div>
       {/* ---------- */}

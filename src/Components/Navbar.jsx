@@ -9,7 +9,7 @@ function Navbar() {
   const [toggle, setToggle] = useState(false);
   const auth = JSON.parse(localStorage.getItem("auth"));
   const user = JSON.parse( localStorage.getItem("user"));
-  console.log(auth);
+  // console.log(auth);
   return (
     <>
       <div className="navbar ">
