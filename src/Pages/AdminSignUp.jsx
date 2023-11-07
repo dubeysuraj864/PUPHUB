@@ -1,30 +1,18 @@
 import Button from "../Components/Button";
-import GoogleLogin from "@matheusluizn/react-google-login";
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-const clientId =
-  "686135361204-cv439itq3ekoc8j6fi5i2e3fgbjg9tjk.apps.googleusercontent.com";
 
-function SignUp() {
+function AdminSignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  const onSuccess = (res) => {
-    console.log("LOGIN SUCCESS! Current User: ", res.profileObj);
-    localStorage.setItem("auth", JSON.stringify(res.profileObj));
-    navigate("/");
-    window.location.reload(true);
-  };
 
-  const onFailure = (res) => {
-    console.log("LOGIN FAILURE! res ", res);
-  };
 
   const handleSubmit = async () => {
-    let result = await fetch("http://localhost:5000/register", {
+    let result = await fetch("http://localhost:5000/admin-sign-up", {
       method: "post",
       body: JSON.stringify({ name, email, password }),
       headers: {
@@ -33,14 +21,14 @@ function SignUp() {
       },
     });
     result = await result.json();
-    localStorage.setItem("user", JSON.stringify(result));
-    navigate("/login");
+    localStorage.setItem("admin", JSON.stringify(result));
+    navigate("/admin-login");
   };
 
   useEffect(()=>{
-    const auth = localStorage.getItem("user");
+    const auth = localStorage.getItem("admin");
     if(auth){
-      navigate("/")
+      navigate("/admin-login");
     }
   },[navigate])
 
@@ -48,7 +36,7 @@ function SignUp() {
     <>
       <div className="sign-up flex justify-center items-center flex-col border mx-auto py-10 w-[400px]">
         <h1 className="text-5xl my-10 font-semibold text-[#F1C21B]">
-          Register
+          Admin Register
         </h1>
         <form
           action=""
@@ -75,10 +63,10 @@ function SignUp() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-           <span className="underline flex justify-start">
+             <span className="underline flex justify-start">
             <Link className="text-left" to="/admin-sign-up ">
               {" "}
-              Register as an Admin!
+              Register as an User!
             </Link>
           </span>
           <button
@@ -89,19 +77,10 @@ function SignUp() {
             <Button text="Register" />
           </button>
         </form>
-        <hr className="border-1 w-1/2 my-6" />
-        <GoogleLogin
-          className="px-10 border"
-          clientId={clientId}
-          buttonText="Continue with Google"
-          onSuccess={onSuccess}
-          onFailure={onFailure}
-          cookiePolicy={"single_host_origin"}
-          isSignedIn={true}
-        />
+      
       </div>
     </>
   );
 }
 
-export default SignUp;
+export default AdminSignUp;
