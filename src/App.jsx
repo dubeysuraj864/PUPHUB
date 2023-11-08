@@ -31,7 +31,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-        <Route path="/" element={<Welcome />} />
+          <Route path="/" element={<Welcome />} />
           <Route element={<PrivateComponents />}>
             <Route path="/products" element={<Products />} />
           </Route>
@@ -40,7 +40,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/admin-sign-up" element={<AdminSignUp />} />
-          <Route path="/admin-page" element={<AdminPage/>} />
+          <Route path="/admin-page" element={<AdminPage />} />
         </Routes>
       </BrowserRouter>
     </div>

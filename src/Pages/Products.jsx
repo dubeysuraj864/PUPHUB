@@ -27,9 +27,11 @@ function Products() {
               return (
                 <BuyNowCard
                   key={id}
-                  image={item.image}
+                  image={item.imageUrl}
                   title={item.title}
-                  desc={item.description}
+                  description={item.description}
+                  price={item.price}
+
                 />
               );
             })}

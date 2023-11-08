@@ -68,13 +68,13 @@ function Navbar() {
             {auth || user ? (
               <>
                 <span className="mr-2">
-                  {auth ? <>{auth.name}</> : <>{user.name}</>}
-                </span>
-                {/* <img
+                  {auth ? <>{auth.name}  <img
                   src={auth.imageUrl}
                   className="w-[50px] rounded-full"
                   alt=""
-                /> */}
+                /></> : <>{user.name}</>}
+                </span>
+              
                {
 
                 auth ?
