@@ -3,14 +3,13 @@ import Menu from "../Images/Group-9.png";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 import { useState } from "react";
-// import Logout from "../Components/Logout";
+import Logout from "../Components/Logout";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const auth = JSON.parse(localStorage.getItem("auth"));
   const user = JSON.parse( localStorage.getItem("user"));
   // console.log(auth);
-  // const admin = localStorage.getItem("admin")
 
   const logout = () => {
     localStorage.clear();
@@ -80,11 +79,12 @@ function Navbar() {
 
                 auth ?
 
-                <>adminResult</>
+                <> <Logout/></>
                 : 
                 <button onClick={logout} className="text-lg">
                   Logout
                 </button>
+               
                
                }
               </>

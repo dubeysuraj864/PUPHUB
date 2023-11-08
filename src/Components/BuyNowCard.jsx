@@ -17,6 +17,7 @@ function BuyNowCard(props) {
           <p>
           {props.desc}
           </p>
+          <span className="text-3xl ">$69</span> <br />
           <button className="border border-[#124C5F] px-6 py-1 rounded-md">Buy Now</button>
         </div>
       </div>
