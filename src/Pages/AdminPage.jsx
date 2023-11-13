@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import { Params } from "react-router-dom";
+import { Params } from "react-router-dom";
 
 function AdminPage() {
   const [imageUrl, setImageUrl] = useState("");
@@ -7,6 +7,12 @@ function AdminPage() {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [products, setProducts] = useState([]);
+  const [form, setForm] = useState({
+    imageUrl: imageUrl,
+    title: title,
+    description: description,
+    price: price,
+  });
 
   const addProducts = async () => {
     let result = await fetch("http://localhost:5000/add-products", {
@@ -20,6 +26,28 @@ function AdminPage() {
     result = await result.json();
     console.log(result);
     getData();
+    setImageUrl("");
+    setTitle("");
+    setDescription("");
+    setPrice("");
+  };
+
+  const updateProduct = async (id) => {
+    // e.preventDefault();
+
+    let result = await fetch(`http://localhost:5000/products/${id}`, {
+      method: "put",
+      body: JSON.stringify({ imageUrl, title, description, price }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    
+    result = await result.json();
+    setForm({result})
+
+    getData();
+
   };
 
   const deleteProduct = async (id) => {
@@ -28,10 +56,9 @@ function AdminPage() {
     });
     result = await result.json();
     if (result) {
-        getData();
-      alert("record is deleted successfully");
+      getData();
+      // alert("record is deleted successfully");
     }
-    
   };
 
   const getData = async () => {
@@ -92,6 +119,11 @@ function AdminPage() {
               />
             </td>
             <td className="p-4 border">
+              <button onClick={updateProduct} className="bg-green-600 p-4">
+                update
+              </button>
+            </td>
+            <td className="p-4 border">
               <button onClick={addProducts} className="bg-green-600 p-4">
                 Add
               </button>
@@ -120,13 +152,22 @@ function AdminPage() {
                   {item._id}
                 </td>
                 <td className="border p-4 w-[200px]">
-                  <img src={item.imageUrl} className="w-[150x] h-[150px] object-cover" alt="" />
+                  <img
+                    src={item.imageUrl}
+                    className="w-[150x] h-[150px] object-cover"
+                    alt=""
+                  />
                 </td>
                 <td className="border p-4 w-[400px]">{item.title}</td>
                 <td className="border p-4 w-[400px]">{item.description}</td>
                 <td className="border p-4 w-[30px]">${item.price}</td>
                 <td className="border p-4 ">
-                  <button className="bg-yellow-300 p-4">Edit</button>
+                  <button
+                    onClick={() => updateProduct(item._id)}
+                    className="bg-yellow-300 p-4"
+                  >
+                    Edit
+                  </button>
                 </td>
                 <td className="border p-4">
                   <button

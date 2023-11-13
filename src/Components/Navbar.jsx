@@ -64,7 +64,7 @@ function Navbar() {
             </>
           ) : null}
 
-          <div className="user-sign  items-center space-x-4 hidden md:flex">
+          <div className="user-sign space-x-4 flex justify-center items-center md:flex">
             {auth || user ? (
               <>
                 <span className="mr-2">
