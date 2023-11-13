@@ -67,10 +67,10 @@ function Navbar() {
           <div className="user-sign space-x-4 flex justify-center items-center md:flex">
             {auth || user ? (
               <>
-                <span className="mr-2">
+                <span className="mr-2 flex justify-center items-center">
                   {auth ? <>{auth.name}  <img
                   src={auth.imageUrl}
-                  className="w-[50px] rounded-full"
+                  className="w-[50px] mx-10 rounded-full"
                   alt=""
                 /></> : <>{user.name}</>}
                 </span>
