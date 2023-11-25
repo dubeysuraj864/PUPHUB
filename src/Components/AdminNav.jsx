@@ -15,7 +15,8 @@ function AdminNav() {
           <Link to="/admin-products">Products</Link>
           <Link to="/admin-add-product">Add Products</Link>
           <Link to="/admin-product-update">Update Products</Link>
-          <Link>Profile</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/sign-up">Register</Link>
           <div className="cursor-pointer" onClick={logout}>
             Logout
           </div>
