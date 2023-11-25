@@ -12,7 +12,7 @@ function AdminProductUpdate() {
 
 
   const getData = async () => {
-    let result = await fetch(`http://localhost:5000/products/${params.id}`);
+    let result = await fetch(`https://puphub-backend.onrender.com/products/${params.id}`);
     result = await result.json();
     console.warn(result, "result");
 
@@ -27,7 +27,7 @@ function AdminProductUpdate() {
     console.warn(imageUrl, title, description, price);
 
       let result = await fetch(
-        `http://localhost:5000/products/${params.id}`,
+        `https://puphub-backend.onrender.com/products/${params.id}`,
         {
           method: "put",
           body: JSON.stringify({ imageUrl, title, description, price }),

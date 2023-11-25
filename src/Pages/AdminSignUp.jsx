@@ -12,7 +12,7 @@ function AdminSignUp() {
 
 
   const handleSubmit = async () => {
-    let result = await fetch("http://localhost:5000/admin-sign-up", {
+    let result = await fetch("https://puphub-backend.onrender.com/admin-sign-up", {
       method: "post",
       body: JSON.stringify({ name, email, password }),
       headers: {

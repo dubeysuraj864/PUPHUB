@@ -9,7 +9,7 @@ function AdminLogin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let result = await fetch("http://localhost:5000/admin-login", {
+    let result = await fetch("https://puphub-backend.onrender.com/admin-login", {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: {

@@ -10,7 +10,7 @@ function AdminPage() {
   }, []);
 
   const deleteProduct = async (id) => {
-    let result = await fetch(`http://localhost:5000/products/${id}`, {
+    let result = await fetch(`https://puphub-backend.onrender.com/products/${id}`, {
       method: "delete",
     });
     result = await result.json();
@@ -20,7 +20,7 @@ function AdminPage() {
   };
 
   const getData = async () => {
-    const result = await fetch("http://localhost:5000/products");
+    const result = await fetch("https://puphub-backend.onrender.com/products");
     const data = await result.json();
     setProducts(data);
   };

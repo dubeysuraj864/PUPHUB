@@ -7,7 +7,7 @@ function Products() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await fetch("http://localhost:5000/products");
+        const result = await fetch("https://puphub-backend.onrender.com/products");
         const data = await result.json();
         console.log(data);
         setProducts(data);
