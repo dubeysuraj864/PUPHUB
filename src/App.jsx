@@ -13,6 +13,7 @@ import AdminSignUp from "./Pages/AdminSignUp";
 import AdminNav from "./Components/AdminNav";
 import AdminProducts from "./Pages/AdminProducts";
 import AdminProductUpdate from "./Pages/AdminProductUpdate";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 const clientId =
   "686135361204-cv439itq3ekoc8j6fi5i2e3fgbjg9tjk.apps.googleusercontent.com";
@@ -39,6 +40,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Welcome />} />
+          <Route path="*" element={<NotFoundPage/>} />
           <Route path="/products" element={<Products />} />
           <Route path="/login" element={<SignIn />} />
           <Route path="/admin-login" element={<AdminLogin />} />
