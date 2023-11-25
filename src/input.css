@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    font-family: 'Mitr', sans-serif;
-    /* cursor: url("./Images/bone.png"), auto; */
+body {
+  font-family: "Mitr", sans-serif;
+  cursor: url("./Images/bone.png"), auto;
 }
-.dog-yellow-bg{
-    border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
+.dog-yellow-bg {
+  border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
 }
 
+input {
+  outline: none;
+}

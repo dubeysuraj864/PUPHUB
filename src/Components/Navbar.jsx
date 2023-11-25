@@ -1,6 +1,6 @@
 import Logo from "../Images/logo.png";
 import Menu from "../Images/Group-9.png";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import { useState } from "react";
 import Logout from "../Components/Logout";
@@ -8,13 +8,14 @@ import Logout from "../Components/Logout";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const auth = JSON.parse(localStorage.getItem("auth"));
-  const user = JSON.parse( localStorage.getItem("user"));
-  // console.log(auth);
+  const user = JSON.parse(localStorage.getItem("user"));
+  const navigate = useNavigate();
 
   const logout = () => {
     localStorage.clear();
+    navigate("/login");
     window.location.reload(true);
-  }
+  };
   return (
     <>
       <div className="navbar ">
@@ -68,25 +69,30 @@ function Navbar() {
             {auth || user ? (
               <>
                 <span className="mr-2 flex justify-center items-center">
-                  {auth ? <>{auth.name}  <img
-                  src={auth.imageUrl}
-                  className="w-[50px] mx-10 rounded-full"
-                  alt=""
-                /></> : <>{user.name}</>}
+                  {auth ? (
+                    <>
+                      {auth.name}{" "}
+                      <img
+                        src={auth.imageUrl}
+                        className="w-[50px] mx-10 rounded-full"
+                        alt=""
+                      />
+                    </>
+                  ) : (
+                    <>{user.name}</>
+                  )}
                 </span>
-              
-               {
 
-                auth ?
-
-                <> <Logout/></>
-                : 
-                <button onClick={logout} className="text-lg">
-                  Logout
-                </button>
-               
-               
-               }
+                {auth ? (
+                  <>
+                    {" "}
+                    <Logout />
+                  </>
+                ) : (
+                  <button onClick={logout} className="text-lg">
+                    Logout
+                  </button>
+                )}
               </>
             ) : (
               <>
@@ -101,6 +107,7 @@ function Navbar() {
           </div>
         </nav>
       </div>
+      <Outlet />
     </>
   );
 }

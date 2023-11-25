@@ -39,6 +39,7 @@ function SignIn() {
       alert("Please enter correct details...");
     }
   };
+
   useEffect(() => {
     const auth = localStorage.getItem("user");
     if (auth) {
@@ -70,7 +71,7 @@ function SignIn() {
           />
 
           <span className="underline flex justify-start">
-            <Link className="text-left" to="/admin-login ">
+            <Link className="text-left" to="/admin-login">
               {" "}
               Login as an Admin!
             </Link>

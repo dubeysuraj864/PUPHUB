@@ -22,8 +22,8 @@ import BorderPaw from "../Images/paw-border.png";
 import ManDog from "../Images/man-dog.png";
 
 import TransparentBg from "../Images/transparent-bg.png";
-import BuyNowCard from "../Components/BuyNowCard";
 import { Link } from "react-router-dom";
+import Products from "./Products";
 
 function Welcome() {
   return (
@@ -198,12 +198,12 @@ function Welcome() {
         </h1>
         <div className="flex justify-between items-center mx-[10%] my-10">
           <span className="font-bold text-xl">25 % OFF all Products </span>
-          <Link to="/products"><Button text="Explore More" /></Link>
+          <Link to="/products">
+            <Button text="Explore More" />
+          </Link>
         </div>
-        <div className="products px-[10%] flex flex-wrap justify-around items-start">
-          <BuyNowCard image='https://m.media-amazon.com/images/I/61IUJIyK2yL._SX522_.jpg' title="Exp1" desc="Desc1" />
-          <BuyNowCard image='https://m.media-amazon.com/images/I/61Zzb69K0qS._SX522_.jpg' title="Exp2" desc="Desc2"  />
-          <BuyNowCard image='https://m.media-amazon.com/images/I/61IUJIyK2yL._SX522_.jpg' title="Exp3" desc="Desc3"  />
+        <div className="products  flex flex-wrap justify-around items-start">
+          <Products />
         </div>
       </div>
       {/* ---------- */}
@@ -250,10 +250,12 @@ function Welcome() {
         </div>
         <div className="speaks-right flex flex-col justify-start space-y-6 p-6 md:p-0">
           <h1 className="text-3xl font-bold break-words">
-          No one appreciates the very <br /> special genius of your <br /> conversation as the dog does.
+            No one appreciates the very <br /> special genius of your <br />{" "}
+            conversation as the dog does.
           </h1>
           <p className="max-w-[520px]">
-          No one appreciates the very special genius of your <br /> conversation as the dog does.
+            No one appreciates the very special genius of your <br />{" "}
+            conversation as the dog does.
           </p>
           <Button text="Explore More" />
         </div>

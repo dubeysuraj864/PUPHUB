@@ -23,7 +23,7 @@ function AdminLogin() {
     if (adminResult.admin) {
       localStorage.setItem("admin", JSON.stringify(adminResult.admin));
       window.location.reload(true);
-      navigate("/admin-page");
+      navigate("/admin-products");
     } else {
       alert("Please enter correct details...");
     }
@@ -31,7 +31,7 @@ function AdminLogin() {
   useEffect(() => {
     const auth = localStorage.getItem("admin");
     if (auth) {
-      navigate("/admin-page");
+      navigate("/admin-products");
     } else {
     }
   }, [navigate]);

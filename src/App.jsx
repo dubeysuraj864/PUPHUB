@@ -2,15 +2,18 @@ import Navbar from "./Components/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import SignIn from "./Pages/SignIn";
-import PrivateComponents from "./Components/PrivateComponents";
 import SignUp from "./Pages/SignUp";
 import Logout from "./Components/Logout";
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
 import Products from "./Pages/Products";
 import AdminLogin from "./Pages/AdminLogin";
-import AdminPage from "./Pages/AdminPage";
+import AdminAddProduct from "./Pages/AdminAddProduct";
 import AdminSignUp from "./Pages/AdminSignUp";
+import AdminNav from "./Components/AdminNav";
+import AdminProducts from "./Pages/AdminProducts";
+import AdminProductUpdate from "./Pages/AdminProductUpdate";
+
 const clientId =
   "686135361204-cv439itq3ekoc8j6fi5i2e3fgbjg9tjk.apps.googleusercontent.com";
 function App() {
@@ -26,21 +29,25 @@ function App() {
 
   // var accessToken = gapi.auth.getToken().access_token;
 
+  const admin = localStorage.getItem("admin");
+  // const user = localStorage.getItem("user");
+
   return (
     <div className="App overflow-hidden">
       <BrowserRouter>
-        <Navbar />
+        {admin ? <AdminNav /> : <Navbar />}
+
         <Routes>
           <Route path="/" element={<Welcome />} />
-          <Route element={<PrivateComponents />}>
-            <Route path="/products" element={<Products />} />
-          </Route>
+          <Route path="/products" element={<Products />} />
           <Route path="/login" element={<SignIn />} />
           <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin-sign-up" element={<AdminSignUp />} />
+          <Route path="/admin-products" element={<AdminProducts />} />
+          <Route path="/admin-add-product" element={<AdminAddProduct />} />
+          <Route path="/admin-product-update/:id" element={<AdminProductUpdate />}/>
           <Route path="/logout" element={<Logout />} />
           <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/admin-sign-up" element={<AdminSignUp />} />
-          <Route path="/admin-page" element={<AdminPage />} />
         </Routes>
       </BrowserRouter>
     </div>

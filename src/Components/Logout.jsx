@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 const clientId =
   "686135361204-cv439itq3ekoc8j6fi5i2e3fgbjg9tjk.apps.googleusercontent.com";
 function Logout() {
-
   const onSuccess = (res) => {
     localStorage.clear();
     console.log("LOGOUT SUCCESSFULLY!");
@@ -13,9 +12,6 @@ function Logout() {
 
   const navigate = useNavigate();
 
-  // const onFailure = (res) => {
-  //     console.log("LOGIN FAILURE! res ", res)
-  // }
   return (
     <>
       <div className="sign-in">
