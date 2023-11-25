@@ -45,7 +45,7 @@ function AdminProductUpdate() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [getData]);
 
   return (
     <>
