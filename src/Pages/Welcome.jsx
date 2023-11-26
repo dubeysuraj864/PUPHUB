@@ -28,7 +28,7 @@ import Products from "./Products";
 function Welcome() {
   return (
     <>
-      <div className="welcome relative flex flex-col-reverse justify-around items-center md:flex-row">
+      <div className="welcome relative flex flex-col-reverse justify-around items-center md:flex-row overflow-hidden">
         <img
           src={Bg}
           className="object-fit absolute w-[100vw] h-[90vh] -z-10"
