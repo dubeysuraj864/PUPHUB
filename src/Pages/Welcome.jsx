@@ -44,7 +44,7 @@ function Welcome() {
           </p>
           <Button text="Explore More" />
         </div>
-        <div className="welcome-right relative flex flex-col justify-center p-10">
+        <div className="welcome-right relative flex flex-col justify-center p-5 md:p-10">
           <img
             src={Paw1}
             className="w-[50px] absolute z-10 top-[80px] left-[40px]"
@@ -93,10 +93,10 @@ function Welcome() {
       </div>
       {/* services */}
       <div className="services p-4 my-10">
-        <h1 className="ml-[10%] border-b-2 w-max pb-1 border-black font-bold text-xl">
+        <h1 className="ml-3 md:ml-[10%] border-b-2 w-max pb-1 border-black font-bold text-xl">
           Service Category
         </h1>
-        <div className="services ml-8 space-y-2 grid grid-cols-2 grid-rows-2 md:flex justify-center items-center mt-5 flex-wrap space-x-0 md:space-x-16">
+        <div className="services ml-3 md:ml-8 space-y-2 grid grid-cols-2 grid-rows-2 md:flex justify-center items-center mt-5 flex-wrap space-x-0 md:space-x-16">
           <div className="grooming bg-gradient-to-b from-[#98F2E1] to-transparent flex flex-wrap flex-col justify-center items-center border border-[#98F2E1] p-4 rounded-md w-[150px] h-[180px]">
             <img src={Grooming} className="w-[70px]" alt="grooming" />
             <span>Grooming</span>
@@ -139,13 +139,13 @@ function Welcome() {
       <div className="dogs-do-speaks h-[110vh] md:h-[90vh] py-10 flex flex-col md:flex-row justify-around items-center relative">
         <img
           src={BorderPaw}
-          className="w-[70px] absolute top-[30px] right-[100px]"
+          className="w-[70px]  absolute top-[30px] right-[10px]"
           alt="paw"
         />
         <div className="speaks-lef relative">
           <img
             src={Food}
-            className="w-[60px] z-10 absolute -bottom-[60px] right-[90px]"
+            className="w-[60px] z-10 absolute -bottom-[20px] right-[90px]"
             alt="dog"
           />
           <img
@@ -171,10 +171,10 @@ function Welcome() {
           <div className="bg-dog relative ">
             <img
               src={SpeaksBg}
-              className="w-[400px] absolute -z-10 -top-20"
+              className="w-[400px] absolute -z-10 top-0"
               alt="dog"
             />
-            <img src={SpeaksDog} className="w-[420px] z-10" alt="dog" />
+            <img src={SpeaksDog} className="w-[420px] h-[420px] object-contain z-10" alt="dog" />
           </div>
         </div>
         <div className="speaks-right flex flex-col justify-start space-y-6 p-6 md:p-0">
@@ -207,7 +207,7 @@ function Welcome() {
         </div>
       </div>
       {/* ---------- */}
-      <div className="dogs-do-speaks bg-gradient-to-b from-[#98f2e175] to-transparent h-[110vh] md:h-[120vh] py-10 flex flex-col md:flex-row-reverse justify-around items-center relative">
+      <div className="dogs-do-speaks bg-gradient-to-b from-[#98f2e175] to-transparent h-[110vh] md:h-[120vh] py-10 flex flex-col md:flex-row-reverse justify-around items-center relative overflow-hidden">
         <img
           src={BorderPaw}
           className="w-[70px] absolute top-[30px] left-[100px]"
@@ -245,7 +245,7 @@ function Welcome() {
               className="w-[400px] absolute -z-10 -top-20"
               alt="dog"
             />
-            <img src={ManDog} className="h-[500px] z-10" alt="dog" />
+            <img src={ManDog} className="md:h-[500px] h-[300px] z-10" alt="dog" />
           </div>
         </div>
         <div className="speaks-right flex flex-col justify-start space-y-6 p-6 md:p-0">

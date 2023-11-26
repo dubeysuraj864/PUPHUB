@@ -11,7 +11,7 @@ function AdminNav() {
   return (
     <>
       <div className="admin-nav">
-        <nav className=" bg-yellow-500 font-bold flex justify-center items-center gap-6 p-5 m-10 border rounded-full">
+        <nav className="flex-wrap bg-yellow-500 font-bold flex md:justify-center items-center gap-6 p-5 md:m-10 border md:rounded-full">
           <Link to="/admin-products">Products</Link>
           <Link to="/admin-add-product">Add Products</Link>
           <Link to="/admin-product-update">Update Products</Link>

@@ -34,9 +34,9 @@ function AdminSignUp() {
 
   return (
     <>
-      <div className="sign-up flex justify-center items-center flex-col border mx-auto py-10 w-[400px]">
-        <h1 className="text-5xl my-10 font-semibold text-[#F1C21B]">
-          Admin Register
+      <div className="sign-up flex justify-center items-center flex-col border mx-auto py-10 md:w-[400px]">
+        <h1 className="text-5xl text-center my-10 font-semibold text-[#F1C21B]">
+          Admin <br />Register
         </h1>
         <form
           action=""
@@ -64,7 +64,7 @@ function AdminSignUp() {
             onChange={(e) => setPassword(e.target.value)}
           />
              <span className="underline flex justify-start">
-            <Link className="text-left" to="/admin-sign-up ">
+            <Link className="text-left" to="/sign-up ">
               {" "}
               Register as an User!
             </Link>

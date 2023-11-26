@@ -46,7 +46,7 @@ function SignUp() {
 
   return (
     <>
-      <div className="sign-up flex justify-center items-center flex-col border mx-auto py-10 w-[400px]">
+      <div className="sign-up flex justify-center items-center flex-col border mx-auto py-10 md:w-[400px]">
         <h1 className="text-5xl my-10 font-semibold text-[#F1C21B]">
           Register
         </h1>

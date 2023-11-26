@@ -7,7 +7,7 @@ import { RiMenu5Fill } from "react-icons/ri";
 import { IoArrowBackCircle } from "react-icons/io5";
 
 function Navbar() {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const auth = JSON.parse(localStorage.getItem("auth"));
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();

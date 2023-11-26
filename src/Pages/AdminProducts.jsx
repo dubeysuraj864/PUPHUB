@@ -26,7 +26,7 @@ function AdminPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex text-xs flex-col items-center justify-center">
       <table className="table-auto border gap-2 m-20">
         <thead className="border">
           <tr>
